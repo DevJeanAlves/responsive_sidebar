@@ -21,7 +21,8 @@ body {
   line-height: 60px;
   box-sizing: border-box;
   width: 90%;
-  margin-left: 27px;
+  padding-left: 27px;
+  margin-left: 0px;
   align-items: center;
   margin-bottom: 5px;
   transition: 0.5s;
@@ -39,9 +40,10 @@ a span {
 }
 
 .menu {
+  display: block;
   padding-left: 27px;
-  line-height: 60px;
   margin-top: 24px;
+  line-height: 60px;
 }
 
 #menu-sidebar {
@@ -74,6 +76,10 @@ a span {
   padding-left: 13px;
 }
 
+#check-label {
+  cursor: pointer;
+}
+
 /* hover effects start */
 
 .ul a:hover {
@@ -94,3 +100,20 @@ a span {
 }
 
 /* hover effects end */
+
+/* dashboard close */
+
+#check:checked ~ .dashboard {
+  left: -190px;
+}
+
+#check:checked ~ .dashboard a span {
+  display: none;
+}
+
+#check:checked ~ .dashboard a {
+  font-size: 20px;
+  margin-left: 180px;
+  width: 65px;
+  display: block;
+}
