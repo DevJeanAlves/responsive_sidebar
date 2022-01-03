@@ -1,5 +1,6 @@
 body {
   margin: 0px;
+  padding: 0;
   height: 100vh;
   font-family: 'Poppins', sans-serif;
 }
@@ -10,12 +11,8 @@ body {
   width: 250px;
   top: 0px;
   left: 0;
-  transition: 1.5s;
-  background: #18c29c;
-}
-
-.ul {
   transition: 0.5s;
+  background: #18c29c;
 }
 
 .ul a {
@@ -28,7 +25,9 @@ body {
   width: 90%;
   padding-left: 27px;
   margin-bottom: 5px;
-  align-items: center;
+  /* align-items: center; */
+  transition: 0.5s;
+  transition-property: width;
 }
 
 /* search box start */
@@ -36,6 +35,8 @@ body {
 #searchBox {
   background: #8ed7c6;
   width: 100%;
+  transition: 0s;
+  transition-property: width, border-radius;
 }
 
 #searchBox img {
@@ -45,6 +46,8 @@ body {
 
 #searchBox:hover {
   width: 88%;
+  transition: 0.5s;
+  transition-property: all;
 }
 
 #check:checked ~ .dashboard #searchBox {
@@ -63,6 +66,8 @@ body {
   width: 50px;
   margin-left: 195px;
   padding-left: 14px;
+  transition: 0s;
+  transition-property: width;
 }
 
 /* search box end*/
@@ -84,7 +89,7 @@ a span {
 
 .perfil-box {
   display: flex;
-  margin-top: 410px;
+  margin-top: 400px;
   align-items: center;
   height: 60px;
   width: 100%;
@@ -121,6 +126,7 @@ a span {
   padding-left: 12px;
   width: 70%;
   transition: 0.5s;
+  transition-property: width;
 }
 
 .perfil-box img:nth-of-type(2):hover {
@@ -173,3 +179,27 @@ a span {
 }
 
 /* setting closed dashbar itens end */
+
+/* main contend start */
+
+.content-main {
+  margin-top: -25px;
+  height: 50vh;
+  margin-left: 260px;
+
+  transition: 0.5s;
+  transition-property: margin-left;
+}
+
+.content-main h1 {
+  color: #084236;
+  margin-left: 0;
+  transition: 0.5s;
+  transition-property: margin-left;
+}
+
+#check:checked ~ .content-main {
+  margin-left: 70px;
+
+  transition: margin-left 0.5s;
+}
